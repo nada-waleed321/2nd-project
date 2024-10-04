@@ -1,0 +1,495 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    perspective: 600px;
+}
+.parent{
+    height: 100px;
+    width: 80%;
+    display: flex;
+    margin: auto;
+    margin-top: 50px;
+    flex-direction:row;
+}
+.div1{
+    width: 120px;
+    height: 100px;
+    background-image: url(../images/6048550139301315212me2.jpg);
+    background-size: cover;
+    background-position: center;
+    flex-grow: 4;
+}
+.div2{
+    height: 100px;
+    flex-grow: 4;
+}
+.div2 ul{
+    margin-left: 30px;
+    margin-top: 40px;
+}
+.div2 ul li a{
+    text-decoration: none;
+    color: #602506;
+    font-weight: 600;
+    font-size: 17px;
+}
+.li-1{
+    position: relative;
+}
+.hidden-table{
+    border: 2px solid #7F5539;
+    width: 454px;
+    height: 184px;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #ffff;
+    display: table;
+    transform: scale(0);
+    transform-origin: center;
+    transition: 1s;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+}
+.li-1:hover .hidden-table{
+    opacity: 1;
+    transform: scale(1);
+}
+td{
+    cursor: pointer;
+    text-align: left;
+    color: #7F5539;
+}
+.span-td{
+    border-bottom: 1px dotted #7F5539;
+    padding-bottom: 5px;
+}
+.div2 ul li{
+    list-style: none;
+    display: inline-block;
+    width: 110px;
+    height: 30px;
+    text-align: center;
+    padding: 5px;
+    position: relative;
+}
+.div2 ul li::after{
+    content: " ";
+    position: absolute;
+    width: 110px;
+    height: 27px;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    transform: scalex(0);
+    transform-origin: left;
+}
+.div2 ul li:hover::after{
+    height: 27px;
+    width: 110px;
+    transform: scalex(1.0);
+    border-width:  2px 0 2px 0;
+    border-color:#7F5539;
+    border-style: solid;
+}
+.div2 ul li::before{
+    content: " ";
+    position: absolute;
+    width: 107px;
+    height: 30px;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+    transform: scaley(0);
+    transform-origin: center;
+}
+.div2 ul li:hover::before{
+    height: 30px;
+    width: 107px;
+    transform: scaley(1);
+    border-width: 0 2px 0 2px;
+    border-color:#7F5539;
+    border-style: solid;
+}
+.header-icons{
+    height: 100px;
+    text-align: right;
+    flex-shrink: 1;
+    flex-grow: 3;
+}
+.span{
+    font-size: 15px;
+    font-weight: 600;
+}
+.header-icon ,.header-Licon{
+    font-size: 30px;
+    margin: 5px;
+}
+.header-Licon{
+    margin-top: 20px;
+    padding-right: 10px;
+}
+.zero{
+    width: 15px;
+    height: 16px;
+    font-size: 16px;
+    font-weight: normal;
+    display: inline-block;
+    background-color: #7F5539;
+    color: #EDE0D4;
+    border-radius: 50%;
+    text-align: center;
+}
+.image{
+    width: 80%;
+    height: 70vh;
+    margin: auto;
+    margin-top: 50px;
+    background-image: url(../images/6048550139301315187.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.image-overlay{
+    position: absolute;
+    width: 400px;
+    height: 70vh;
+    padding-top: 150px;
+}
+.image-overlay-h2{
+    color: white;
+    font-size: 45px;
+    text-transform: capitalize;
+    margin-left: 100px;
+}
+.image-overlay-btn{
+    border: 1px solid white;
+    background-color: white;
+    width: 80px;
+    height: 25px;
+    margin: 30px 105px;
+    cursor: pointer;
+}
+.collection{
+    height: 70vh;
+    width: 100w;
+}
+.title-h2 , .products-title-h2{
+    font-size: 30px;
+    margin-top: 50px;
+    text-align: center;
+}
+.title-hr ,.products-title-hr{
+    background-color: #7F5539;
+    width: 80px;
+    height: 2px;
+    margin: auto;
+    margin-top: 10px;
+    transition:  0.4s ease-out;
+}
+.title:hover .title-hr{
+    transform: scale(1.7 , 1);
+}
+.parent-items{
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.item{
+    flex-basis: 245px;
+    position: relative;
+    text-transform: capitalize;
+}
+.item-image{
+    background-image:Url(../images/Leather\ Bag.jpeg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 80%;
+    padding: 3px;
+}
+.item-image-1{
+    background-image: url(../images/Leather\ Bag.jpeg);
+}
+.item-image-2{
+    background-image: url(../images/16393661122c3c59bfc553c45a0545a53c856d91b9_thumbnail_336x.jpg);
+}
+.item-image-3{
+    background-image: url(../images/169424885372318104a6ec5fab1916ae173a33f226_thumbnail_336x.jpg);
+}
+.item-image-4{
+    background-image: url(../images/1697631503d50f1f87a473b82a805d1b42ce01688c_thumbnail_336x.jpg);
+}
+.item-h3{
+    margin-top: 16px;
+    color: #B08968;
+}
+.item-h2{
+    font-size: 18px;
+}
+.overlay-icon{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    position: absolute;
+}
+.overlay-icon i{
+    margin-top: 300px;
+    margin-left: 215px;
+    color: #7F5539;
+    font-size: 30px;
+}
+.item:hover .overlay-icon{
+    visibility: visible;
+}
+.marketing{
+    height: 50vh;
+    width: 80%;
+    display: flex;
+    margin:50px auto;
+    flex-direction:row;
+    justify-content: space-between;
+}
+.marketing-text{
+    height: 100%;
+    width: 49%;
+    padding: 10px;
+    background-color: #f3f6f7;
+}
+.marketing-text-title{
+    display: flex;
+    flex-direction: row;
+}
+.marketing-icon i{
+    font-size: 50px;
+    color: #7F5539;
+    margin-right: 5px;
+}
+.marketing-icon-text h2{
+    text-transform: capitalize;
+    font-size: 25px;
+}
+.marketing-text-p{
+    margin-top: 20px;
+    line-height: 25px;
+}
+.marketing-discount-1 , .marketing-discount-2{
+    height: 100%;
+    width: 23%;
+    background-size: cover;
+    padding: 15px 10px;
+}
+.marketing-discount-1:hover , .marketing-discount-2:hover{
+    transform: scale(1.1);
+    transition: 0.8s;
+}
+.marketing-discount-1, .marketing-discount-2{
+    background-position: center;
+    background-size: cover;
+}
+.marketing-discount-1{
+    background-image: url(../images/crossbag-dreamz.webp);
+}
+.marketing-discount-2{
+    background-image: url(../images/bags2.jpeg);
+}
+.discount-h2{
+    font-size: 20px;
+    color: #B08968;
+}
+.discount-h3{
+    font-size: 25px;
+}
+.lines{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    justify-content: flex-end;
+}
+.line{
+    width: 60px;
+    height: 2px;
+    background-color: #7F5539;
+    margin: 0 10px;
+}
+.free{
+    display: grid;
+    width: 80%;
+    margin: auto;
+    grid-template-columns: 5fr 1px 5fr 1px 5fr 1px 5fr 1px 5fr;
+}
+.free-item{
+    text-align: center;
+    text-transform: capitalize;
+    position: relative;
+}
+.free-image{
+    width: 50px;
+    height: 70px;
+    margin: auto;
+    background-size: cover;
+    transition: 0.5s;
+    background-position: top;
+}
+.free-item:hover .free-image{
+    background-position: bottom;
+}
+.free-image1{
+    background-image: url(../images/6048550139301315198.jpg);
+}
+.free-image2{
+    background-image: url(../images/6048550139301315206.jpg);
+}
+.free-image3{
+    background-image: url(../images/6048550139301315207.jpg);
+}
+.free-image4{
+    background-image: url(../images/6048550139301315210.jpg);
+}
+.free-image5{
+    background-image: url(../images/6048550139301315211.jpg);
+}
+.free-item-h2{
+    font-size: 18px;
+}
+.free-item-h3{
+    font-size: 14px;
+    color: #6C757D;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.free-ver-line{
+    background-color: #7F5539;
+    height: 100px;
+    width: 1px;
+}
+.free-end{
+    width: 80%;
+    margin: 50px auto;
+}
+.products-title:hover .products-title-hr{
+    transform: scale(1.6,1);
+}
+.words{
+    width: 40%;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.word{
+    font-size: 18px;
+}
+.products{
+    width: 90%;
+    height: 90vh;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.product-item{
+    width: 32%;
+    height: 100%;
+}
+.product-item-image{
+    width: 100%;
+    height: 80%;
+    background-size: cover;
+    background-position: center;
+}
+.product-item-image-11{
+    background-image: url(../images/Minimalist\ Genuine\ Leather\ Tote\,\ Large\ Handbag\,\ Top\ Handle\ Purse\,\ Leather\ Weekday\ Bag\,\ Soft\ Leather\ Purse\,\ \ Everyday\ Bag\,\ Gift\ For\ Mother.jpeg);
+}
+.product-item-image-12{
+    background-image: url(../images/download\ \(5\).jpeg);
+}
+.product-item-image-13{
+    background-image: url(../images/bags.jpeg);
+}
+.product-item-image-21{
+    background-image: url(../images/1689757333aed4909289ac177a115aee6045f48e69_thumbnail_720x.jpg);
+}
+.product-item-image-22{
+    background-image: url(../images/1711938578a19a03be4474a9dbccacdb142e65b0e8_thumbnail_405x552.webp);
+}
+.product-item-image-23{
+    background-image: url(../images/1712919569d600f6baece2c7635f11ebe792a0bec5_thumbnail_336x.jpg);
+}
+.card ,.front-card ,.back-card{
+    width: 100%;
+    height: 100%;
+}
+.card{
+    transform-style: preserve-3d;
+    position: relative;
+    transition: 0.5s; 
+}
+.front-card{
+    position: absolute;
+    backface-visibility: hidden;
+}
+.back-card{
+    position: absolute;
+    transform: rotatey(180deg);
+    backface-visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.back-card-11{
+    background-image: url(../images/Minimalist\ Shoulder\ Tote\ Bag.jpeg);
+}
+.back-card-12{
+    background-image: url(../images/af6fe0664f25ae2483bb6724f33dee72.jpg);
+}
+.back-card-13{
+    background-image: url(../images/MO\ -\ 2021\ SHOULDER\ BAG\ FOR\ WOMEN\ SB017\ -\ Caramel\ colour\ _\ 29\ X\ 11\ X\ 21\ CM.jpeg);
+}
+.back-card-21{
+    background-image: url(../images/Original\ Chic\ 4\ Colors\ Leather\ Shoulder\ Bag\ DEEP\ BROWN-FREE\ SIZE.jpeg);
+}
+.back-card-22{
+    background-image: url(../images/Tone\ Stained\ Hade\ Bag\ -\ Cognac\ on\ Garmentory.jpeg);
+}
+.back-card-23{
+    background-image: url(../images/170918945547d0739641125f20dbc484aa324dae01_thumbnail_405x552.webp);
+}
+.product-item-image:hover .card{
+    transform: rotatey(180deg);
+}
+.back-card i{
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    color: white;
+    padding: 7px;
+    margin: auto 5px;
+    text-align: center;
+    background-color: #502d01;
+    cursor: pointer;
+}
+.stars{
+    color: yellow;
+    margin: 2px 0;
+}
+.l-star{
+    color: black;
+}
